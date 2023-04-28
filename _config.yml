@@ -10,8 +10,8 @@ show_excerpts: true # set to true to show excerpts on the homepage
 sass:
   sass_dir: _sass
 plainwhite:
-  name: Jundong Tan
-  tagline: Software Engineer
+  name: Macken Tan
+  tagline: 
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
   search: true # set to true to enable searchbar
@@ -24,9 +24,9 @@ plainwhite:
     - post
   # generate social links in footer
   # social_links:
-    # twitter: samarsault
-    # github:  samarsault
-    # linkedIn: in/samarsault
+    # twitter: xx
+    # github:  xx
+    # linkedIn: xx
     #dribbble: jekyll
     #flickr:   jekyll
     #instagram: jekyll
