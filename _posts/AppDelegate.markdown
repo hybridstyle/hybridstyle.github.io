@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "AppDelegate 怎么用"
-date:   2023-04-28
+date:   2019-03-23 21:03:36 +0530
 categories: Swift
 ---
+
 在 SwiftUI 中使用 `AppDelegate`，你可以在 `@main` 标记的 `App` 结构体中添加一个 `@UIApplicationDelegateAdaptor` 属性，该属性允许你指定一个遵循 `UIApplicationDelegate` 协议的类。
 
 下面是一个使用 `@UIApplicationDelegateAdaptor` 的示例：
