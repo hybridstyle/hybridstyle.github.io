@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Spring向Thymeleaf传递参数的几种方式"
-date: 2023-04-28 19:43
+date: 2023-04-28
 categories: Java
 ---
         
