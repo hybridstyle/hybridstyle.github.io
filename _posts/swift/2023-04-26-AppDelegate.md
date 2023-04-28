@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "AppDelegate 怎么用"
-date:   2019-03-23 21:03:36 +0530
+date:   2023-04-26
 categories: Swift
 ---
 
@@ -9,7 +9,7 @@ categories: Swift
 
 下面是一个使用 `@UIApplicationDelegateAdaptor` 的示例：
 
-```swift
+```swiftmd
 @main
 struct MyApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
