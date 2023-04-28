@@ -1,0 +1,95 @@
+
+在 SwiftUI 中，Binding 是一种用于将状态值从一个视图传递到另一个视图的机制。通过使用 Binding，您可以在视图之间共享数据，并允许数据在不同视图之间的双向绑定。
+
+Binding 是一个可变引用类型，它通过将对原始值的引用传递给其他视图来允许双向绑定。当绑定的值发生更改时，所有依赖于该值的视图都会自动更新。
+
+以下是一个简单的示例，说明如何使用 Binding：
+
+```swift
+struct ContentView: View {
+    @State var isOn: Bool = false
+    
+    var body: some View {
+        VStack {
+            Text("Switch is \(isOn ? "on" : "off")")
+            Toggle("Toggle", isOn: $isOn)
+            ChildView(isOn: $isOn)
+        }
+    }
+}
+
+struct ChildView: View {
+    @Binding var isOn: Bool
+    
+    var body: some View {
+        VStack {
+            Text("Child View: Switch is \(isOn ? "on" : "off")")
+            Button("Toggle") {
+                self.isOn.toggle()
+            }
+        }
+    }
+}
+```
+
+在这个示例中，我们创建了一个父视图 ContentView，其中包含一个带有绑定的开关和一个子视图 ChildView，它也接受一个带有绑定的开关。当用户在任何一个视图中更改开关状态时，所有相关视图都将自动更新。
+
+请注意，当您使用 Binding 时，您需要确保在传递值之前将其包装在 $ 符号中，以表示绑定。例如，在上面的示例中，我们将 $isOn 传递给 ChildView，以表示一个绑定，而不是一个简单的布尔值。
+
+在 SwiftUI 中，@State 属性用于在视图中存储和管理状态。当 @State 属性值发生更改时，视图将自动更新。然而，如果我们想在一个视图中使用另一个视图的状态，或者想在多个视图之间共享状态，我们需要使用 Binding。
+
+Binding 是一个由 @State 属性生成的双向绑定，它使得一个视图可以读取和修改另一个视图的状态。可以将 Binding 传递给子视图，以便子视图可以更改父视图的状态。例如：
+
+```swift
+struct ContentView: View {
+    @State var isOn = false
+
+    var body: some View {
+        VStack {
+            Text("isOn = \(isOn.description)")
+            Toggle(isOn: $isOn) {
+                Text("Toggle")
+            }
+        }
+    }
+}
+```
+
+在这个示例中，我们定义了一个名为 isOn 的布尔值属性，并将其用于控制 Toggle 开关的状态。使用 $ 符号，我们将 isOn 属性包装在 Binding 中，并将其传递给 Toggle。现在，当用户切换开关时，Toggle 会更新 isOn 的值，并且 isOn 的新值将传递回父视图。
+
+Binding 还可以用于自定义视图和复合视图中，以便在这些视图之间共享状态。例如：
+
+```swift
+struct CustomView: View {
+    var label: String
+    @Binding var value: String
+
+    var body: some View {
+        VStack {
+            Text(label)
+            TextField("Enter value", text: $value)
+        }
+    }
+}
+
+struct ContentView: View {
+    @State var name = ""
+    @State var age = ""
+
+    var body: some View {
+        VStack {
+            CustomView(label: "Name", value: $name)
+            CustomView(label: "Age", value: $age)
+            Text("Your name is \(name) and your age is \(age).")
+        }
+    }
+}
+```
+
+在这个示例中，我们定义了一个自定义视图 CustomView，它包含一个标签和一个文本字段。我们将 CustomView 中的文本字段的文本绑定到一个名为 value 的字符串属性。然后，我们在父视图 ContentView 中使用 CustomView 两次，并将每个 CustomView 的 value 属性绑定到不同的状态变量（name 和 age）。当用户在自定义视图中输入文本时，它们的值将传递回父视图，以便我们可以将它们显示在文本视图中。
+
+总之，Binding 允许我们在视图之间共享状态，并且使得子视图可以更改父视图的状态。通过使用 Binding，我们可以创建更灵活的、可复用的视图，并提高代码的可维护性。
+
+
+Binding 本身并不支持传递方法或函数，但你可以将函数或方法的执行与 Binding 的值绑定起来。
+

@@ -1,0 +1,46 @@
+
+Swift 中的 Optional 是一种特殊的枚举类型，它可以用来表示一个值是存在（非空）或不存在（空）。使用 Optional 类型可以有效避免程序因为空值引用而崩溃，提高程序的健壮性。
+
+Optional 类型的定义如下：
+
+```swift
+enum Optional<Wrapped> {
+    case none
+    case some(Wrapped)
+}
+```
+
+其中，`Wrapped` 是一个泛型类型参数，它可以是任意一种数据类型。`Optional` 类型有两种取值：`.none` 表示该值不存在，`.some(Wrapped)` 表示该值存在，并存储在 `Wrapped` 中。
+
+在 Swift 中，使用 `?` 符号来表示 Optional 类型，例如：
+
+```swift
+var age: Int? = nil
+```
+
+在上面的代码中，变量 `age` 声明为 Optional 类型，初始值为 `nil`，表示该值不存在。如果要给 `age` 赋值，则可以使用 `=` 符号，例如：
+
+```swift
+age = 18
+```
+
+在上面的代码中，将 `age` 赋值为 `18`，表示该值存在，并存储在 `Optional` 类型的 `.some(18)` 中。
+
+为了从 Optional 类型中取出实际的值，可以使用 Optional 绑定或强制解包的方式，例如：
+
+```swift
+// Optional 绑定
+if let myAge = age {
+    print("My age is \(myAge)")
+} else {
+    print("Age is nil")
+}
+
+// 强制解包
+let myAge = age!
+print("My age is \(myAge)")
+```
+
+在上面的代码中，使用 Optional 绑定的方式，将 `age` 解包为 `myAge`，如果 `age` 存在，则打印 `My age is \(myAge)`，否则打印 `Age is nil`。使用强制解包的方式，直接从 Optional 类型中取出存储的值，如果 `age` 存在，则打印 `My age is \(myAge)`，否则程序会崩溃。
+
+需要注意的是，如果在强制解包一个 Optional 类型的值时，该值为空（不存在），则程序会崩溃。因此，应该尽可能使用 Optional 绑定等安全的方式来处理 Optional 类型的值。

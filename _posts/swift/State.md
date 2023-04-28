@@ -1,0 +1,41 @@
+
+在SwiftUI中，`State`是一种属性包装器，用于管理视图中的可变状态。使用`State`，您可以将视图中的数据与代码的其他部分进行交互，并使数据更加响应式。
+
+`State`的值是可变的，当状态发生更改时，视图将自动重新计算，从而使视图中的UI反映最新的状态。使用`State`时，SwiftUI将自动处理状态的更改和视图的重新计算。
+
+使用`State`时，您需要完成以下步骤：
+
+1. 声明一个`@State`属性，用于存储状态的值。例如：
+
+```swift
+struct MyView: View {
+    @State var count: Int = 0
+    
+    var body: some View {
+        Text("Count: \(count)")
+    }
+}
+```
+
+在此示例中，我们声明了一个`@State`属性`count`，并将其初始值设置为`0`。我们可以在视图中使用`count`来显示状态的值。
+
+2. 在视图中使用`count`属性来显示状态的值。例如：
+
+```swift
+struct MyView: View {
+    @State var count: Int = 0
+    
+    var body: some View {
+        VStack {
+            Text("Count: \(count)")
+            Button("Increment") {
+                count += 1
+            }
+        }
+    }
+}
+```
+
+在此示例中，我们使用`count`属性来显示状态的值，并在按钮的操作中使用`+=`运算符来递增`count`属性的值。当我们按下按钮时，视图将自动重新计算并更新UI，以反映最新的状态。
+
+总之，`State`是SwiftUI中非常有用的一个功能，它使得管理视图状态变得更加容易和直观。它提供了一种响应式的方式来处理视图中的数据，并自动处理状态的更改和视图的重新计算。
