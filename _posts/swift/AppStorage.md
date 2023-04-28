@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "AppStorage介绍"
+date:   2019-03-23 21:03:36 +0530
+categories: Swift
+---
+
 `AppStorage` 是一个用于在 SwiftUI 应用程序中存储和检索应用程序级别的永久数据的属性包装器。它允许我们在应用程序的生命周期中存储和检索简单的数据类型，例如字符串、布尔值和数字等。
 
 `AppStorage` 的使用非常简单，只需要在需要存储数据的属性前添加 `@AppStorage` 属性包装器即可。例如，以下代码演示了如何使用 `AppStorage` 存储一个布尔值：
