@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "Swift 语法糖"
+date:   2023-04-26
+categories: Swift
+---
+
+
 Swift 中常用的语法糖有很多，这里列举几个比较常见的：
 
 1. 可选绑定（Optional Binding）：在使用可选类型时，可以使用可选绑定来判断可选类型是否有值，从而安全地访问其中的内容。例如：

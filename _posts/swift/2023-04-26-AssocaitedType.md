@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "关联类型（Associated Types）介绍"
+date:   2023-04-26
+categories: Swift
+---
 
 关联类型（Associated Types）是 Swift 中的一种类型协议，它允许我们在定义协议时，暂时不指定某些类型的具体实现，而是在实现协议的类型中指定。通过这种方式，我们可以更加灵活地定义协议，并使得协议能够适应不同的类型实现。
 

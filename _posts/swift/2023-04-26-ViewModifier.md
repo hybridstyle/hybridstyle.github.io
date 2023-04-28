@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "ViewModifier 介绍"
+date:   2023-04-26
+categories: Swift
+---
 
 ViewModifier 是 SwiftUI 中一个非常实用的特性，它可以帮助我们将常见的视图样式和布局逻辑抽象出来，从而提高代码的可重用性和可维护性。
 

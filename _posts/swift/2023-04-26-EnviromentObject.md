@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "EnvironmentObject 用法"
+date:   2023-04-26
+categories: Swift
+---
 
 
 

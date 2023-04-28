@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "ObservedObject"
+date:   2023-04-26
+categories: Swift
+---
 
 `ObservedObject` 是 SwiftUI 框架中的一个属性包装器，它提供了一种在视图中观察和响应数据变化的机制。使用 `ObservedObject` 可以实现视图和数据的双向绑定，当数据发生变化时，视图会自动更新。
 

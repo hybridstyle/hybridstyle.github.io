@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "ViewBuilder 介绍"
+date:   2023-04-26
+categories: Swift
+---
 
 ViewBuilder 的基本用法是，我们可以将多个视图作为参数传递给一个函数，然后使用 @ViewBuilder 修饰这个函数的参数列表。这样，SwiftUI 就会自动将这些视图组合成一个完整的视图层次结构。
 

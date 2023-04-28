@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "SceneDelegate"
+date:   2023-04-26
+categories: Swift
+---
 
 在 iOS 13 及以后的版本中，苹果推出了 `SceneDelegate` 来管理一个或多个 app 的 `UIWindow` 和其他与 app 生命周期相关的操作。
 

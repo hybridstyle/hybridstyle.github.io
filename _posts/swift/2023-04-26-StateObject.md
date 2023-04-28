@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "StateObject"
+date:   2023-04-26
+categories: Swift
+---
 
 在SwiftUI中，`StateObject`是一种用于管理状态的属性包装器，它类似于`@State`属性包装器，但有一个重要的区别：它使用的对象是由SwiftUI自动管理的，而不是由视图本身管理。
 
