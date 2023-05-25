@@ -1,0 +1,203 @@
+swiftui 常用的100个组件
+
+1. **Text** - 用于显示静态文本。
+
+2. **Image** - 用于展示图片。
+
+3. **Button** - 用户可以点击的按钮。
+
+4. **HStack** - 一个水平布局的组件，会横向排列其子组件。
+
+5. **VStack** - 一个垂直布局的组件，会纵向排列其子组件。
+
+6. **ZStack** - 将其子组件叠加在一起。
+
+7. **Spacer** - 一个空间填充组件，可以用来创建灵活的空间。
+
+8. **ForEach** - 在给定的集合上重复使用某个视图。
+
+9. **NavigationView** - 提供导航功能的视图。
+
+10. **List** - 用于创建列表的组件。
+
+11. **ScrollView** - 允许内容在其内部滚动。
+
+12. **Link** - 提供了一个链接到网页的组件。
+
+13. **TextField** - 用于接收用户输入的文本。
+
+14. **Slider** - 允许用户在一个范围内选择一个值。
+
+15. **Toggle** - 提供开关按钮，表示开/关状态。
+
+16. **DatePicker** - 允许用户选择日期和时间。
+
+17. **Form** - 用于创建表单的组件。
+
+18. **Group** - 将多个视图组织在一起，但不影响其外观。
+
+19. **Divider** - 创建一条水平线，常用于分隔内容。
+
+20. **Picker** - 允许用户从一系列选项中选择。
+
+21. **ProgressView** - 显示任务进度的视图。
+
+22. **Alert** - 提供警告或消息提示。
+
+23. **TabView** - 提供标签视图，用于切换不同的子视图。
+
+24. **GeometryReader** - 允许获取其内部视图的大小和位置。
+
+25. **Grid** - 创建网格布局的视图。
+
+26. **Menu** - 创建一个菜单，其中包含了多个选项。
+
+27. **Sheet** - 提供一个从底部滑出的视图，用于显示更多信息。
+
+28. **Stepper** - 允许用户增加或减少值。
+
+29. **Popover** - 提供一个弹出视图，通常用于 iPad 上。
+
+30. **Section** - 用于将列表或表单中的内容进行分组。
+
+31. **Circle** - 创建一个圆形。
+
+32. **Rectangle** - 创建一个矩形。
+
+33. **Capsule** - 创建一个胶囊形状。
+
+34. **Path** - 创建复杂的自定义形状。
+
+35. **RoundedRectangle** - 创建一个带有圆角的矩
+
+形。
+
+36. **Ellipse** - 创建一个椭圆形。
+
+37. **AlignmentGuides** - 用于对齐视图。
+
+38. **DragGesture** - 允许用户拖动视图。
+
+39. **RotationGesture** - 允许用户旋转视图。
+
+40. **MagnificationGesture** - 允许用户缩放视图。
+
+41. **GestureMask** - 用于控制如何识别和响应手势。
+
+42. **SecureField** - 用于接收密码输入。
+
+43. **StackNavigationViewStyle** - 定义导航视图的显示风格。
+
+44. **DefaultNavigationViewStyle** - 默认的导航视图风格。
+
+45. **DoubleColumnNavigationViewStyle** - 双列的导航视图风格。
+
+46. **CompactNavigationViewStyle** - 紧凑的导航视图风格。
+
+47. **Animation** - 用于创建动画效果。
+
+48. **EnvironmentValues** - 提供对环境值的访问，如颜色方案、布局方向等。
+
+49. **EnvironmentObject** - 用于在视图层次结构中共享数据。
+
+50. **Binding** - 用于创建视图和数据之间的双向绑定。
+
+51. **ViewModifier** - 用于修改视图样式和行为的方法。
+
+52. **Color** - 用于表示颜色。
+
+53. **Gradient** - 渐变色效果，包括线性（LinearGradient）、径向（RadialGradient）和角度（AngularGradient）渐变。
+
+54. **Shape** - 自定义形状。
+
+55. **EquatableView** - 一个可以进行相等性判断的视图，有助于优化渲染性能。
+
+56. **ViewBuilder** - 一个用于构建自定义视图的函数。
+
+57. **TabItem** - 在 TabView 中作为单个 tab 的内容。
+
+58. **ViewRouter** - 用于在不同视图之间进行导航。
+
+59. **ObservedObject** - 用于观察对象并在其更改时刷新视图。
+
+60. **Published** - 用于标记可观察对象的属性，当这些属性更改时，视图将更新。
+
+61. **StateObject** - SwiftUI 的状态管理属性包装器，用于在视图中创建和管理可观察对象。
+
+62. **TransformGesture** - 允许用户通过旋转、缩放和平移手势来变换视图。
+
+63. **DrawingGroup** - 在单个图形中呈现其子视图，有助于提高渲染性能。
+
+64. **CoordinateSpace** - 提供一种定义自定义坐标空间的方式。
+
+65. **ViewTreeObserver** - 提供一种检测视图树更改的方法。
+
+66. **Edge** - 表示视图边缘的结构，用于定义 padding、alignment 等。
+
+67. **Anchor** - 用于确定视图或某个点在视图中的位置。
+
+68. **UnitPoint** - 描述了一个单位点，常用于定位和对齐。
+
+69. **AspectVGrid** - 以纵向网格的方式显示内容，且会尽可能保持子视图的宽高比。
+
+70. **LazyHGrid** and **LazyVGrid** - 懒加载网格，可以用于显示大量数据。
+
+71. **ScaledMetric** - 一个属性包装器，它按比例调整某个数值，以适应当前的环境大小。
+
+72. **AppStorage** - 用于在视图中存储和检索 UserDefaults 的值。
+
+73. **ScaledToFit** - 将视图缩放到适应其容器的大小。
+
+74. **Fill** - 用于表示视图如何填充其分配的空间。
+
+75. **ContentShape** - 用于定义视图的可点击区域。
+
+76. **FlipsForRightToLeftLayoutDirection** - 在阅读方向从右到左的环境中，翻转视图的布局。
+
+77. **FocusState** - 用于控制和追踪视图的焦点状态。
+
+78. **Commands** - 用于定义主菜单或上下文菜单中的命令。
+
+79. **AsyncImage** - 异步加载和显示网络图片。
+
+80. **Canvas** - 用于在其上绘制自定义图形。
+
+81. **MatchedGeometryEffect** - 在视图之间创建动画转换。
+
+82. **DisclosureGroup** - 创建可展开和折叠的视图组。
+
+83. **Badge** - 显示角标。
+
+84. **Symbol** - 显示 SF Symbols 图标。
+
+85. **Label** - 创建图标和文本的组合。
+
+86. **Toolbar** - 创建工具栏。
+
+87. **SafeAreaInset** - 安全区插入。
+
+88. **Table** - 创建表格视图。
+
+89. **Sidebar** - 创建侧边栏。
+
+90. **Monochrome** - 创建单色视图。
+
+91. **GraphicsContext** - 提供绘图上下文。
+
+92. **TextCase** - 控制文本的大小写。
+
+93. **ViewTransition** - 控制视图间的过渡动画。
+
+94. **Material** - 创建材质背景。
+
+95. **Accessibility** - 创建无障碍视图。
+
+96. **Refreshable** - 创建可下拉刷新的视图。
+
+97. **Markdown** - 显示 Markdown 格式的文本。
+
+98. **ConTextMenu** - 创建上下文菜单。
+
+99. **Draggable** - 创建可拖动的视图。
+
+100. **Orientation** - 创建响应设备方向变化的视图。
