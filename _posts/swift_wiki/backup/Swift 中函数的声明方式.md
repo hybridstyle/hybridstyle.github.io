@@ -1,0 +1,111 @@
+Swift 中函数的声明方式
+在 Swift 中，函数的声明方式有几种形式，可以根据需求和函数的特性选择适当的方式。以下是几种常见的函数声明方式：
+
+1. 普通函数声明：
+   ```swift
+   func greet(name: String) {
+       print("Hello, \(name)!")
+   }
+   ```
+   在这个例子中，我们声明了一个名为 `greet` 的函数，它接受一个名为 `name` 的参数，参数类型为 `String`。函数体内部打印了一条问候语。
+
+2. 带返回值的函数声明：
+   ```swift
+   func square(number: Int) -> Int {
+       return number * number
+   }
+   ```
+   在这个例子中，我们声明了一个名为 `square` 的函数，它接受一个名为 `number` 的参数，参数类型为 `Int`。函数体内部计算并返回了参数的平方值。
+
+3. 函数参数标签和参数名称：
+   ```swift
+   func greet(to name: String, with message: String) {
+       print("\(message), \(name)!")
+   }
+   ```
+   在这个例子中，我们在函数声明中使用了参数标签和参数名称。参数标签用于在函数调用时提供可读性更强的参数名，而参数名称则在函数内部使用。这样做可以提供更清晰的函数调用语法：
+   ```swift
+   greet(to: "John", with: "Hello")
+   ```
+
+4. 默认参数值：
+   ```swift
+   func greet(name: String = "Guest") {
+       print("Hello, \(name)!")
+   }
+   ```
+   在这个例子中，我们在函数声明中为参数 `name` 提供了默认值，当调用函数时，如果没有提供参数值，则会使用默认值。这样可以使函数调用更灵活：
+   ```swift
+   greet() // 输出: Hello, Guest!
+   greet(name: "John") // 输出: Hello, John!
+   ```
+
+5. 可变参数：
+   ```swift
+   func sum(numbers: Int...) -> Int {
+       var total = 0
+       for number in numbers {
+           total += number
+       }
+       return total
+   }
+   ```
+   在这个例子中，我们在函数声明中使用了可变参数，使用 `...` 表示参数类型为变长参数。可变参数允许函数接受任意数量的参数，并将它们作为数组进行处理。例如：
+   ```swift
+   let result = sum(numbers: 1, 2, 3, 4, 5)
+   ```
+
+以上是几种常见的函数声明方式，可以根据需求和函数的特性选择合适的方式。同时，Swift 还支持函数重载、函数类型作为参数和返回值、嵌套函数等高级函数特性，以提供更灵活和强大的函数功能。
+
+当然！除了之前提到的函数声明方式外，还有其他一些函数声明的方式。以下是其中一些：
+
+1. 匿名函数（闭包）：
+可以使用闭包来声明匿名函数，而不是使用命名函数。
+```swift
+let sum = { (a: Int, b: Int) -> Int in
+    return a + b
+}
+```
+在这个例子中，我们使用闭包来声明一个匿名函数，它接受两个 `Int` 类型的参数并返回它们的和。
+
+2. 方法声明：
+方法是与特定类型关联的函数，它们在类型的定义中声明。
+```swift
+struct Rectangle {
+    var width: Double
+    var height: Double
+    
+    func area() -> Double {
+        return width * height
+    }
+}
+```
+在这个例子中，我们在 `Rectangle` 结构体中声明了一个方法 `area()`，它计算并返回矩形的面积。
+
+3. 类型方法声明：
+类型方法是与类型本身关联的函数，而不是与类型的实例关联。
+```swift
+class MathUtils {
+    class func square(number: Int) -> Int {
+        return number * number
+    }
+}
+```
+在这个例子中，我们在 `MathUtils` 类中声明了一个类型方法 `square(number:)`，它计算并返回一个数的平方。
+
+4. 函数类型作为参数和返回值：
+在 Swift 中，函数可以作为参数传递给其他函数，也可以作为函数的返回值返回。
+```swift
+func applyOperation(_ operation: (Int) -> Int, to number: Int) -> Int {
+    return operation(number)
+}
+
+func double(_ number: Int) -> Int {
+    return number * 2
+}
+
+let result = applyOperation(double, to: 5) // 10
+```
+在这个例子中，我们声明了一个接受函数类型参数和返回函数类型的函数 `applyOperation(_:to:)`。我们还定义了一个函数 `double(_:)`，它将一个数乘以 2。然后，我们将 `double` 函数作为参数传递给 `applyOperation(_:to:)` 函数，以对数值进行双倍运算。
+
+这些是 Swift 中更多的函数声明方式。Swift 的函数功能非常丰富，支持高级特性，如闭包捕获值、函数重载、泛型函数等。这使得 Swift 可以适应各种不同的编程场景和需求。
